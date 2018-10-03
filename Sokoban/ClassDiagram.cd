@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sokoban.Game">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACAEAAAAhAAAAAAAAAAAAAAAAAABgAAAAQAAAQA=</HashCode>
+      <FileName>Spel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Speler" />
+      <Property Name="Level" />
+      <Property Name="GameView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Player">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAACAAAAAABAAAACACAAAAAAQA=</HashCode>
+      <FileName>Speler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Tile">
+    <Position X="10.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAgAAAAAAAAAAgAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Tegel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kist" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Crate">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Kist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Wall">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Muur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Destination">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bestemming.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Level">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAIAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Level.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Tegel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.GameView">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Trap">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ValKuil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Colleague">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAABAAAAAAAAAAAAAAAAACAAACAAAAAAAA=</HashCode>
+      <FileName>Colleague.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
