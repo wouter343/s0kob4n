@@ -7,14 +7,11 @@ namespace Sokoban
 {
     public class Tile
     {
-        public int Position
+        public Tile()
         {
-            get => default(int);
-            set
-            {
-            }
-        }
 
+        }
+      
         public Crate Kist
         {
             get => default(Crate);
@@ -23,52 +20,21 @@ namespace Sokoban
             }
         }
 
-        public int HasCrate
+        public Boolean HasCrate
         {
-            get => default(int);
+            get => default(Boolean);
             set
             {
             }
         }
 
-        public int HasPlayer
+        public Boolean HasPlayer
         {
-            get => default(int);
+            get => default(Boolean);
             set
             {
             }
         }
 
-        public int down
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
-
-        public int up
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
-
-        public int left
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
-
-        public int right
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
     }
 }

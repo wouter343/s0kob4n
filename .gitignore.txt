@@ -1,2 +1,0 @@
-*obj/
-.vs/Sokoban/v15/.suo

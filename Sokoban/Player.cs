@@ -7,9 +7,9 @@ namespace Sokoban
 {
     public class Player
     {
-        public int Tile
+        public Tile Tile
         {
-            get => default(int);
+            get => default(Tile);
             set
             {
             }

@@ -5,13 +5,22 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class Game
+    public class GameController
     {
         private Player Speler;
+        private Level level;
+        private GameView gameview;
+
+        public GameController()
+        {
+            level = new Level();
+            gameview = new GameView();
+            gameview.PrintField(level.field);
+        }
 
         public Player Player
         {
-            get => default(int);
+            get => default(Player);
             set
             {
             }

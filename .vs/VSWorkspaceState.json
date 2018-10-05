@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Sokoban",
+    "\\Sokoban\\bin",
+    "\\Sokoban\\Controller",
+    "\\Sokoban\\Model"
   ],
   "SelectedNode": "\\Sokoban.sln",
   "PreviewInSolutionExplorer": false
