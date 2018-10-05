@@ -42,34 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
-    <Compile Include="Destination.cs" />
->>>>>>> 8fa2859936765b3602ba013e30a327e86ee85e17
     <Compile Include="Colleague.cs" />
-    <Compile Include="Crate.cs" />
     <Compile Include="Destination.cs" />
     <Compile Include="GameController.cs" />
     <Compile Include="GameView.cs" />
-<<<<<<< HEAD
-    <Compile Include="Level.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="Trap.cs" />
-    <Compile Include="Wall.cs" />
-=======
     <Compile Include="Crate.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="Wall.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Game.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="Trap.cs" />
->>>>>>> 8fa2859936765b3602ba013e30a327e86ee85e17
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
