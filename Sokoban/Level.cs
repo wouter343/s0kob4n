@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Sokoban
 {
@@ -9,29 +10,11 @@ namespace Sokoban
     {
         public Tile[,] field {get; set;}
         private String[,] testveld = new String[2,8];
+        private String[,] stringField;
 
         public Level()
         {
-            field = new Tile[2,8];
-
-            testveld[0,0] = "#";
-            testveld[0,1] = "#";
-            testveld[0,2] = "#";
-            testveld[0,3] = "#";
-            testveld[0,4] = "#";
-            testveld[0,5] = "#";
-            testveld[0,6] = "#";
-            testveld[0,7] = "#";
-            testveld[1,0] = "#";
-            testveld[1,1] = ".";
-            testveld[1,2] = ".";
-            testveld[1,3] = ".";
-            testveld[1,4] = ".";
-            testveld[1,5] = ".";
-            testveld[1,6] = ".";
-            testveld[1,7] = "#";
-
-            createField(testveld);
+            
         }
 
         public Tile tile
@@ -52,6 +35,7 @@ namespace Sokoban
 
         private void createField(String[,] stringfield)
         {
+            field = new Tile[stringfield.GetLength(0),stringfield.GetLength(1)];
             for(int x =0; x < stringfield.GetLength(0); x++){
             
                 for(int y = 0; y < stringfield.GetLength(1); y++) {
@@ -69,7 +53,40 @@ namespace Sokoban
 
         public void Load()
         {
-            throw new System.NotImplementedException();
+            string[] lines;
+            var list = new List<string>();
+            var fileStream = new FileStream(@"C:\Users\Wouter\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
+
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+            {
+            string line;
+                while ((line = streamReader.ReadLine()) != null)
+                    {
+                         list.Add(line);
+                    }
+            }
+            lines = list.ToArray();
+            int width = 0;
+            int height = lines.Length;
+            foreach(string line in lines){
+                if(line.Length > width){
+                    width = line.Length;       
+                }
+            }
+            stringField = new String[height,width];
+                Console.WriteLine(height + " " + width);
+            int x = 0;
+           
+            foreach(string line in lines){
+                int y = 0;
+                foreach(char letter in line){
+                    Console.WriteLine(line);
+                  stringField[x,y] = letter.ToString(); 
+                    y++;
+                }
+                x++;
+             }
+            createField(stringField);
         }
 
         public void Save()

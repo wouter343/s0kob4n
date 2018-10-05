@@ -14,6 +14,8 @@ namespace Sokoban
         public GameController()
         {
             level = new Level();
+
+            level.Load();
             gameview = new GameView();
             gameview.PrintField(level.field);
         }
