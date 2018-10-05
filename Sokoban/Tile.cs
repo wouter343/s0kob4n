@@ -31,41 +31,41 @@ namespace Sokoban
             }
         }
 
-        public int HasPlayer
+        public Tile HasPlayer
         {
-            get => default(int);
+            get => default(Tile);
             set
             {
             }
         }
 
-        public int down
+        public Tile down
         {
-            get => default(int);
+            get => default(Tile);
             set
             {
             }
         }
 
-        public int up
+        public Tile up
         {
-            get => default(int);
+            get => default(Tile);
             set
             {
             }
         }
 
-        public int left
+        public Tile left
         {
-            get => default(int);
+            get => default(Tile);
             set
             {
             }
         }
 
-        public int right
+        public Tile right
         {
-            get => default(int);
+            get => default(Tile);
             set
             {
             }
