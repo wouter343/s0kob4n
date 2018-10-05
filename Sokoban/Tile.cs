@@ -38,5 +38,37 @@ namespace Sokoban
             {
             }
         }
+
+        public int down
+        {
+            get => default(int);
+            set
+            {
+            }
+        }
+
+        public int up
+        {
+            get => default(int);
+            set
+            {
+            }
+        }
+
+        public int left
+        {
+            get => default(int);
+            set
+            {
+            }
+        }
+
+        public int right
+        {
+            get => default(int);
+            set
+            {
+            }
+        }
     }
 }
