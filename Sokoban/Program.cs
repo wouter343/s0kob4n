@@ -15,6 +15,8 @@ namespace Sokoban
            
 
            GameController game = new GameController();
+            game.Play();
+
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         

@@ -1,33 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Sokoban.Game">
+  <Class Name="Sokoban.GameController">
     <Position X="4.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAACAEAAAAhAAAAAAAAAAAAAAAAAABgAAAAQAAAQA=</HashCode>
-      <FileName>Game.cs</FileName>
+      <HashCode>EAAAAAAAAAAAhAAAAAAAAAAAAAEAAAABgAAAACAAAQA=</HashCode>
+      <FileName>GameController.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="Speler" />
-      <Property Name="Level" />
-      <Property Name="GameView" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Player">
     <Position X="7.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAACAAAAAABAAAACACAAAAAAQA=</HashCode>
+      <HashCode>CACAAAAAAAAgAAAAAAAACAAAAAEBAAAACACAAAEwAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Tile">
     <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAEAgAAAAAAAAAAgIAAAAAAAAAgAAgAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Tile.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Kist" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Crate">
     <Position X="7.25" Y="1" Width="1.5" />
@@ -53,17 +45,14 @@
   <Class Name="Sokoban.Level">
     <Position X="4.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgIAAAAAIAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AICBgIAAAAAIAAIAAAAAAAAAACAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Level.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Tegel" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.GameView">
     <Position X="1.75" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>GameView.cs</FileName>
     </TypeIdentifier>
   </Class>

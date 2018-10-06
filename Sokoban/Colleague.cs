@@ -7,6 +7,11 @@ namespace Sokoban
 {
     public class Colleague : Player
     {
+
+        public Colleague(Level level) :base(level)
+        {
+
+        }
         public int Sleeps
         {
             get => default(int);

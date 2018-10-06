@@ -7,7 +7,7 @@ namespace Sokoban
 {
     public class GameController
     {
-        private Player Speler;
+        private Player player;
         private Level level;
         private GameView gameview;
 
@@ -17,40 +17,12 @@ namespace Sokoban
 
             level.Load();
             gameview = new GameView();
-            gameview.PrintField(level.field);
+
+            player = new Player(level);
         }
 
-        public Player Player
-        {
-            get => default(Player);
-            set
-            {
-            }
-        }
 
-        public Level Level
-        {
-            get => default(Level);
-            set
-            {
-            }
-        }
-
-        public GameView GameView
-        {
-            get => default(GameView);
-            set
-            {
-            }
-        }
-
-        public int Colleague
-        {
-            get => default(int);
-            set
-            {
-            }
-        }
+        public int Colleague { get; set; }
 
         public void TriggerColleague()
         {
@@ -59,7 +31,34 @@ namespace Sokoban
 
         public void Play()
         {
-            throw new System.NotImplementedException();
+            ConsoleKeyInfo keyinfo;
+            gameview.PrintField(level.field);
+
+            keyinfo = Console.ReadKey(true);
+            while (keyinfo.Key != ConsoleKey.S)
+            {
+                Console.WriteLine(keyinfo.Key);
+                if(keyinfo.Key == ConsoleKey.DownArrow)
+                {
+                    player._moveDown();
+                    Console.WriteLine("move up!");
+                } else if(keyinfo.Key == ConsoleKey.UpArrow)
+                {
+                    player._moveUp();
+                } else if(keyinfo.Key == ConsoleKey.LeftArrow)
+                {
+                    player._moveLeft();
+                } else if(keyinfo.Key == ConsoleKey.RightArrow)
+                {
+                    player._moveRight();
+                }
+                Console.Clear();
+                gameview.PrintField(level.field);
+
+                keyinfo = Console.ReadKey(true);
+            }
+
+
         }
 
         public void Reset()
