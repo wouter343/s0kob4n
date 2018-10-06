@@ -12,27 +12,11 @@ namespace Sokoban
 
         }
       
-        public Crate Chest
-        {
-            get => default(Crate);
-            set
-            {
-            }
-        }
-        public Boolean HasCrate
-        {
-            get => default(Boolean);
-            set
-            {
-            }
-        }
+        public Crate Chest { get; set; }
+        public Boolean HasCrate { get; set; }
+                
+            
 
-        public Boolean HasPlayer
-        {
-            get => default(Boolean);
-            set
-            {
-            }
-        }
+        public Boolean HasPlayer { get; set; }
     }
 }

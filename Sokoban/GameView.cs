@@ -16,7 +16,6 @@ namespace Sokoban
 
         public void PrintField(Tile[,] level)
         {
-            
             for (int x = 0; x < level.GetLength(0) ; x++){
                
                 for(int y = 0; y < level.GetLength(1); y++){
@@ -29,19 +28,29 @@ namespace Sokoban
 
         private void PrintTile(Tile tile)
         {
-            if(tile.HasCrate){
+            if (tile.HasCrate)
+            {
                 Console.Write("o");
-                }
-            else if(tile.HasPlayer){
+            }
+            else if (tile.HasPlayer)
+            {
                 Console.Write("@");
-                }
-            else if(tile.GetType() == typeof(Wall)) {
+            }
+            else if (tile.GetType() == typeof(Wall))
+            {
                 Console.Write("#");
-            } else if(tile.GetType() == typeof(Trap)){
-               Console.Write("bla"); 
-             } else {
+            }
+            else if (tile.GetType() == typeof(Trap))
+            {
+                Console.Write("bla");
+            }
+            else if (tile.GetType() == typeof(Destination))
+            {
+                Console.Write("x");
+            } else
+            {
                 Console.Write(".");
-                }
+            }
         }
     }
 }

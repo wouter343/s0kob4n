@@ -45,6 +45,10 @@ namespace Sokoban
                          field[x,y] = new Tile();
                     } else if(stringfield[x,y].Equals("x")){
                          field[x,y] = new Destination();
+                    } else if(stringfield[x,y].Equals("o")){
+                        field[x, y] = new Tile() { HasCrate = true };
+                    } else if(stringfield[x,y].Equals("@")){
+                        field[x, y] = new Tile() { HasPlayer = true };
                     }
                 }
              }
@@ -55,7 +59,7 @@ namespace Sokoban
         {
             string[] lines;
             var list = new List<string>();
-            var fileStream = new FileStream(@"C:\Users\Wouter\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
 
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
@@ -74,13 +78,11 @@ namespace Sokoban
                 }
             }
             stringField = new String[height,width];
-                Console.WriteLine(height + " " + width);
             int x = 0;
            
             foreach(string line in lines){
                 int y = 0;
-                foreach(char letter in line){
-                    Console.WriteLine(line);
+                foreach (char letter in line){
                   stringField[x,y] = letter.ToString(); 
                     y++;
                 }
