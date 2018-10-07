@@ -7,10 +7,6 @@ namespace Sokoban
 {
     public class Tile
     {
-        public Tile()
-        {
-
-        }
       
         public Boolean HasCrate { get; set; }
                 

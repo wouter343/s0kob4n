@@ -10,7 +10,6 @@ namespace Sokoban
     {
         private Level level;
         private Tile[,] field;
-        private Tile CurrentTile { get; set; }
         private int CurXpos;
         private int CurYpos;
 
@@ -125,11 +124,6 @@ namespace Sokoban
                 }
             }
 
-        }
-
-        public void _checkMove()
-        {
-            throw new System.NotImplementedException();
         }
 
         public Level Level
