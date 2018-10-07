@@ -47,7 +47,6 @@
     <Compile Include="Destination.cs" />
     <Compile Include="GameController.cs" />
     <Compile Include="GameView.cs" />
-    <Compile Include="Crate.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="Wall.cs" />
     <Compile Include="Program.cs" />

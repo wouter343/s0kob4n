@@ -18,5 +18,13 @@ namespace Sokoban
             
 
         public Boolean HasPlayer { get; set; }
+
+        public Crate Crate
+        {
+            get => default(Crate);
+            set
+            {
+            }
+        }
     }
 }
