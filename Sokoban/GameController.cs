@@ -19,7 +19,7 @@ namespace Sokoban
             gameview = new GameView();
 
             player = new Player(level);
-            level.Save();
+            Play();
         }
 
 
@@ -57,7 +57,13 @@ namespace Sokoban
                 gameview.PrintField(level.field);
 
                 keyinfo = Console.ReadKey(true);
+                if(!level.CheckFieldState()){
+                    break;
+                    
+                }
+
             }
+            Console.WriteLine("game over");
 
 
         }

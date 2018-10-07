@@ -36,9 +36,12 @@ namespace Sokoban
         private void createField(String[,] stringfield)
         {
             field = new Tile[stringfield.GetLength(0),stringfield.GetLength(1)];
-            for(int x =0; x < stringfield.GetLength(0); x++){
-                for(int y = 0; y < stringfield.GetLength(1); y++) {
-                    if(stringfield[x,y].Equals("#")){
+            for(int x =0; x < stringfield.GetLength(0); x++)
+            {
+                for(int y = 0; y < stringfield.GetLength(1); y++) 
+                {
+                    if(stringfield[x,y].Equals("#"))
+                    {
                          field[x,y] = new Wall();
                     } else if(stringfield[x,y].Equals(".")){
                          field[x,y] = new Tile();
@@ -95,9 +98,11 @@ namespace Sokoban
            String[] stringField = new string[field.GetLength(0)];
            String value;
 
-           for (int x = 0; x < field.GetLength(0) ; x++){
+           for (int x = 0; x < field.GetLength(0) ; x++)
+           {
                
-                for(int y = 0; y < field.GetLength(1); y++){
+                for(int y = 0; y < field.GetLength(1); y++)
+                {
                    if (field[x,y].HasCrate)
                     {
                         value = "o";
@@ -126,10 +131,22 @@ namespace Sokoban
                 System.IO.File.WriteAllLines(@"C:\Users\Wouter\Source\Repos\s0kob4n\Sokoban\Saves\test.txt", stringField);       
             }
         }
+        
 
-        public void CheckFieldState()
+        public Boolean CheckFieldState()
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine(field.GetLength(0));
+            Console.WriteLine(field.GetLength(1));
+            for (int x = 0; x < field.getlength(0) ; x++){ 
+                for(int y = 0; y < field.getlength(1); y++){
+                   if (field[x,y].GetType() == typeof(Destination))
+                    {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                 }
+            }
         }
     }
 }
