@@ -9,9 +9,7 @@ namespace Sokoban
     {
       
         public Boolean HasCrate { get; set; }
-                
-            
-
+    
         public Boolean HasPlayer { get; set; }
 
     }
