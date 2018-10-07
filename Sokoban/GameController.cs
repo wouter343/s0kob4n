@@ -43,7 +43,7 @@ namespace Sokoban
                     info = Console.ReadLine();
                     if (info.Equals("s"))
                     {
-                        Environment.Exit(0);
+                        Quit();
                     }
                     else
                     {
@@ -91,6 +91,10 @@ namespace Sokoban
                     else if (keyinfo.Key == ConsoleKey.RightArrow)
                     {
                         player._moveRight();
+                    } else if(keyinfo.Key == ConsoleKey.R)
+                    {
+                        level.Load(info);
+                        player = new Player(level);
                     }
                     Console.Clear();
                     gameview.PrintField(level.field);
@@ -116,7 +120,7 @@ namespace Sokoban
 
         public void Quit()
         {
-            throw new System.NotImplementedException();
+            Environment.Exit(0);
         }
     }
 }
