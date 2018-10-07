@@ -38,7 +38,8 @@ namespace Sokoban
         
         public void _moveUp()
         {
-            if (!(field[CurXpos - 1, CurYpos].GetType() == typeof(Wall) || field[CurXpos, CurYpos].HasCrate)) {
+            if (!(field[CurXpos - 1, CurYpos].GetType() == typeof(Wall))) {
+                if(field[CurXpos - 1, CurYpos].HasCrate && !field[CurXpos - 2, CurYpos].HasCrate)
                 field[CurXpos, CurYpos].HasPlayer = false;
                 CurXpos--;
                 field[CurXpos, CurYpos].HasPlayer = true;
@@ -73,6 +74,7 @@ namespace Sokoban
                 CurYpos--;
                 field[CurXpos, CurYpos].HasPlayer = true;
             }
+
         }
 
         public void _checkMove()
