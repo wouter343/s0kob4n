@@ -89,7 +89,12 @@ namespace Sokoban
                 gameview.PrintField(level.field);
 
                 keyinfo = Console.ReadKey(true);
+               if(!level.CheckFieldState()){
+                    break; 
+                }
+
             }
+            Console.WriteLine("game over");
 
 
         }

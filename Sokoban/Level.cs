@@ -36,9 +36,12 @@ namespace Sokoban
         private void createField(String[,] stringfield)
         {
             field = new Tile[stringfield.GetLength(0),stringfield.GetLength(1)];
-            for(int x =0; x < stringfield.GetLength(0); x++){
-                for(int y = 0; y < stringfield.GetLength(1); y++) {
-                    if(stringfield[x,y].Equals("#")){
+            for(int x =0; x < stringfield.GetLength(0); x++)
+            {
+                for(int y = 0; y < stringfield.GetLength(1); y++) 
+                {
+                    if(stringfield[x,y].Equals("#"))
+                    {
                          field[x,y] = new Wall();
                     } else if(stringfield[x,y].Equals(".")){
                          field[x,y] = new Tile();
@@ -58,6 +61,7 @@ namespace Sokoban
         {
             string[] lines;
             var list = new List<string>();
+
             var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level" + lvl + ".txt", FileMode.Open, FileAccess.Read);
 
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
@@ -92,12 +96,14 @@ namespace Sokoban
 
         public void Save()
         {
-           String[] stringField = new string[field.GetLength(0)];
+           String[] stringField = new String[field.GetLength(0)];
            String value;
 
-           for (int x = 0; x < field.GetLength(0) ; x++){
+           for (int x = 0; x < field.GetLength(0) ; x++)
+           {
                
-                for(int y = 0; y < field.GetLength(1); y++){
+                for(int y = 0; y < field.GetLength(1); y++)
+                {
                    if (field[x,y].HasCrate)
                     {
                         value = "o";
@@ -126,10 +132,21 @@ namespace Sokoban
                 System.IO.File.WriteAllLines(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\test.txt", stringField);       
             }
         }
+        
 
-        public void CheckFieldState()
-        {
-            throw new System.NotImplementedException();
+        public Boolean CheckFieldState()
+        { 
+            
+            for(int x = 0; x < field.GetLength(0); x++){ 
+                for(int y = 0; y < field.GetLength(1); y++){
+                   if (field[x,y].GetType() == typeof(Destination) && !field[x,y].HasCrate)
+                    {
+                      
+                        return true;
+                    } 
+                 }
+            }
+            return false;
         }
     }
 }
