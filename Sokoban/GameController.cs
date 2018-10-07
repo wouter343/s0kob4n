@@ -67,14 +67,13 @@ namespace Sokoban
             player = new Player(level);
             gameview.PrintField(level.field);
 
-            keyinfo = Console.ReadKey(true);
+            keyinfo = Console.ReadKey();
             while (keyinfo.Key != ConsoleKey.S)
             {
                 Console.WriteLine(keyinfo.Key);
                 if(keyinfo.Key == ConsoleKey.DownArrow)
                 {
                     player._moveDown();
-                    Console.WriteLine("move up!");
                 } else if(keyinfo.Key == ConsoleKey.UpArrow)
                 {
                     player._moveUp();

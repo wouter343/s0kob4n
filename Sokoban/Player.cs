@@ -39,7 +39,7 @@ namespace Sokoban
         public void _moveUp()
         {
             if (!(field[CurXpos - 1, CurYpos].GetType() == typeof(Wall))) {
-                if (field[CurXpos - 1, CurYpos].HasCrate && (field[CurXpos - 2, CurYpos].GetType() == typeof(Tile)
+                if (field[CurXpos - 1, CurYpos].HasCrate && !field[CurXpos - 2, CurYpos].HasCrate && (field[CurXpos - 2, CurYpos].GetType() == typeof(Tile)
                     || field[CurXpos - 2, CurYpos].GetType() == typeof(Destination)))
                 {
                     field[CurXpos - 1, CurYpos].HasCrate = false;
@@ -62,7 +62,7 @@ namespace Sokoban
         {
             if (!(field[CurXpos + 1, CurYpos].GetType() == typeof(Wall)))
             {
-                if (field[CurXpos + 1, CurYpos].HasCrate && (field[CurXpos + 2, CurYpos].GetType() == typeof(Tile)
+                if (field[CurXpos + 1, CurYpos].HasCrate && !field[CurXpos + 2, CurYpos].HasCrate && (field[CurXpos + 2, CurYpos].GetType() == typeof(Tile)
                     || field[CurXpos + 2, CurYpos].GetType() == typeof(Destination)))
                 {
                     field[CurXpos + 1, CurYpos].HasCrate = false;
@@ -85,7 +85,7 @@ namespace Sokoban
         {
             if (!(field[CurXpos, CurYpos + 1].GetType() == typeof(Wall)))
             {
-                if (field[CurXpos, CurYpos + 1].HasCrate && (field[CurXpos, CurYpos + 2].GetType() == typeof(Tile)
+                if (field[CurXpos, CurYpos + 1].HasCrate && !field[CurXpos, CurYpos + 2].HasCrate && (field[CurXpos, CurYpos + 2].GetType() == typeof(Tile)
                     || field[CurXpos, CurYpos + 2].GetType() == typeof(Destination)))
                 {
                     field[CurXpos, CurYpos + 1].HasCrate = false;
@@ -108,7 +108,7 @@ namespace Sokoban
         {
             if (!(field[CurXpos, CurYpos - 1].GetType() == typeof(Wall)))
             {
-                if (field[CurXpos, CurYpos - 1].HasCrate && (field[CurXpos, CurYpos - 2].GetType() == typeof(Tile)
+                if (field[CurXpos, CurYpos - 1].HasCrate && !field[CurXpos, CurYpos - 2].HasCrate && (field[CurXpos, CurYpos - 2].GetType() == typeof(Tile)
                     || field[CurXpos, CurYpos - 2].GetType() == typeof(Destination)))
                 {
                     field[CurXpos, CurYpos - 1].HasCrate = false;
