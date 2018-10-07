@@ -132,5 +132,13 @@ namespace Sokoban
         {
             throw new System.NotImplementedException();
         }
+
+        public Level Level
+        {
+            get => default(Level);
+            set
+            {
+            }
+        }
     }
 }

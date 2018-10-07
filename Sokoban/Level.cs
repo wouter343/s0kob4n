@@ -9,7 +9,6 @@ namespace Sokoban
     public class Level
     {
         public Tile[,] field {get; set;}
-        private String[,] testveld = new String[2,8];
        
 
         public Level()
@@ -61,8 +60,10 @@ namespace Sokoban
         {
             string[] lines;
             var list = new List<string>();
+            String path;
+            path = Environment.CurrentDirectory;
 
-            var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level" + lvl + ".txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream("../../Saves/Level" + lvl + ".txt", FileMode.Open, FileAccess.Read);
 
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
@@ -147,6 +148,14 @@ namespace Sokoban
                  }
             }
             return false;
+        }
+
+        public Tile Tile
+        {
+            get => default(Tile);
+            set
+            {
+            }
         }
     }
 }

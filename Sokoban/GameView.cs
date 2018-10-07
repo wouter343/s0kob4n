@@ -14,6 +14,14 @@ namespace Sokoban
             
         }
 
+        public GameController GameController
+        {
+            get => default(GameController);
+            set
+            {
+            }
+        }
+
         public void PrintField(Tile[,] level)
         {
             for (int x = 0; x < level.GetLength(0) ; x++){

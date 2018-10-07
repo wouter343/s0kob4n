@@ -21,6 +21,22 @@ namespace Sokoban
 
         public int Colleague { get; set; }
 
+        public Level Level
+        {
+            get => default(Level);
+            set
+            {
+            }
+        }
+
+        public Player Player
+        {
+            get => default(Player);
+            set
+            {
+            }
+        }
+
         public void TriggerColleague()
         {
             throw new System.NotImplementedException();
@@ -107,6 +123,7 @@ namespace Sokoban
 
                 }
                 Console.WriteLine("game over");
+                Console.ReadLine();
                 Console.Clear();
             }
 

@@ -12,7 +12,6 @@ namespace Sokoban
 
         }
       
-        public Crate Chest { get; set; }
         public Boolean HasCrate { get; set; }
                 
             
