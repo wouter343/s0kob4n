@@ -19,6 +19,7 @@ namespace Sokoban
             gameview = new GameView();
 
             player = new Player(level);
+            level.Save();
         }
 
 

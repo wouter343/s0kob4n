@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sokoban",
-    "\\Sokoban\\bin",
-    "\\Sokoban\\Controller",
-    "\\Sokoban\\Model"
+    "\\Sokoban"
   ],
-  "SelectedNode": "\\Sokoban.sln",
+  "SelectedNode": "\\Sokoban\\GameController.cs",
   "PreviewInSolutionExplorer": false
 }
