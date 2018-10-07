@@ -54,11 +54,11 @@ namespace Sokoban
         }
            
 
-        public void Load()
+        public void Load(String lvl)
         {
             string[] lines;
             var list = new List<string>();
-            var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level" + lvl + ".txt", FileMode.Open, FileAccess.Read);
 
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {

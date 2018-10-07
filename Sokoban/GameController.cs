@@ -15,11 +15,7 @@ namespace Sokoban
         {
             level = new Level();
 
-            level.Load();
             gameview = new GameView();
-
-            player = new Player(level);
-            level.Save();
         }
 
 
@@ -32,7 +28,43 @@ namespace Sokoban
 
         public void Play()
         {
+            bool validNumber = false;
+            int lvl = 0;
+            Console.WriteLine("welcome to sokoban!");
+            Console.WriteLine("kies een doolhof(1-4), druk op s om te stoppen");
+
+            String info = "";
+            while (!validNumber)
+            {
+                info = Console.ReadLine();
+                if (info.Equals("s"))
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    try
+                    {
+                        lvl = Int32.Parse(info);
+                        validNumber = true;
+                    }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("please enter a valid number");
+                        validNumber = false;
+                    }
+                    if (validNumber && lvl > 0 && lvl <= 4)
+                    {
+                        level.Load(info);
+                    } else if (validNumber)
+                    {
+                        Console.WriteLine("please enter a valid number");
+                    }
+                }
+            }
+
             ConsoleKeyInfo keyinfo;
+            player = new Player(level);
             gameview.PrintField(level.field);
 
             keyinfo = Console.ReadKey(true);
