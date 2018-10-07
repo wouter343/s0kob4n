@@ -9,7 +9,6 @@ namespace Sokoban
     public class Player
     {
         private Level level;
-        private GameView gameView;
         private Tile[,] field;
         private Tile CurrentTile { get; set; }
         private int CurXpos;
@@ -135,7 +134,7 @@ namespace Sokoban
 
         public Level Level
         {
-            get => default(Level);
+            get => level;
             set
             {
             }

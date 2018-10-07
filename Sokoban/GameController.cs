@@ -23,7 +23,7 @@ namespace Sokoban
 
         public Level Level
         {
-            get => default(Level);
+            get => level;
             set
             {
             }
@@ -31,7 +31,7 @@ namespace Sokoban
 
         public Player Player
         {
-            get => default(Player);
+            get => player;
             set
             {
             }
