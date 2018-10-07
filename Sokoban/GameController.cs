@@ -14,12 +14,12 @@ namespace Sokoban
         public GameController()
         {
             level = new Level();
-
             level.Load();
+
             gameview = new GameView();
 
             player = new Player(level);
-            Play();
+            
         }
 
 
@@ -57,9 +57,8 @@ namespace Sokoban
                 gameview.PrintField(level.field);
 
                 keyinfo = Console.ReadKey(true);
-                if(!level.CheckFieldState()){
-                    break;
-                    
+               if(!level.CheckFieldState()){
+                    break; 
                 }
 
             }

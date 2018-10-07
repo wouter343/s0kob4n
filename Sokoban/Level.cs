@@ -61,7 +61,7 @@ namespace Sokoban
         {
             string[] lines;
             var list = new List<string>();
-            var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(@"C:\Users\Wouter\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
 
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
@@ -95,7 +95,7 @@ namespace Sokoban
 
         public void Save()
         {
-           String[] stringField = new string[field.GetLength(0)];
+           String[] stringField = new String[field.GetLength(0)];
            String value;
 
            for (int x = 0; x < field.GetLength(0) ; x++)
@@ -134,19 +134,18 @@ namespace Sokoban
         
 
         public Boolean CheckFieldState()
-        {
-            Console.WriteLine(field.GetLength(0));
-            Console.WriteLine(field.GetLength(1));
-            for (int x = 0; x < field.getlength(0) ; x++){ 
-                for(int y = 0; y < field.getlength(1); y++){
-                   if (field[x,y].GetType() == typeof(Destination))
+        { 
+            
+            for(int x = 0; x < field.GetLength(0); x++){ 
+                for(int y = 0; y < field.GetLength(1); y++){
+                   if (field[x,y].GetType() == typeof(Destination) && !field[x,y].HasCrate)
                     {
+                      
                         return true;
-                    } else {
-                        return false;
-                    }
+                    } 
                  }
             }
+            return false;
         }
     }
 }
