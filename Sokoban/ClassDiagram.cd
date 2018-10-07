@@ -1,35 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+
+  <Class Name="Sokoban.GameController">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAhAAAAAAAAAAAAAEAAAABgAAAASAAAQA=</HashCode>
+      <FileName>GameController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Level" />
+      <Property Name="Player" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Player">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAAAAAAAgAAAAAAAACAAAAAEBAAABCBCAAAEgAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Level" />
+    </ShowAsAssociation>
+  </Class>
   <Class Name="Sokoban.Tile">
     <Position X="15.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAQBAAAAAAAAAAAAgAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Tile.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Colleague">
-    <Position X="3.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAABAAAAAAAAAAAAAAAAACAAACAAAAAAAA=</HashCode>
-      <FileName>Colleague.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Wall">
     <Position X="15.25" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Wall.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Trap">
-    <Position X="17.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Trap.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Level">
-    <Position X="10" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACBgIAAAAAIAAIAAAAAAAAAAAAAAAgAAAAAAAAAAQA=</HashCode>
       <FileName>Level.cs</FileName>
@@ -45,14 +46,14 @@
       <FileName>Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.GameController">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+  <Class Name="Sokoban.Level">
+    <Position X="10" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAhAAAAAAAAAAAAAEAAAABgAAAASAAAQA=</HashCode>
-      <FileName>GameController.cs</FileName>
+      <HashCode>AACBgIAAAAAIAAIAAAAAAAAAAAAAAAgAAAAAAAAAAQA=</HashCode>
+      <FileName>Level.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Level" />
+      <Property Name="Tile" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.GameView">
@@ -65,8 +66,15 @@
       <Property Name="GameController" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Sokoban.Player">
-    <Position X="7" Y="2.5" Width="1.5" />
+  <Class Name="Sokoban.Trap">
+    <Position X="17.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Trap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Colleague">
+    <Position X="3.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CACAAAAAAAAgAAAAAAAACAAAAAEBAAABCBCAAAEgAAA=</HashCode>
       <FileName>Player.cs</FileName>

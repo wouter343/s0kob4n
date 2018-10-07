@@ -17,5 +17,6 @@ namespace Sokoban
             
 
         public Boolean HasPlayer { get; set; }
+
     }
 }
