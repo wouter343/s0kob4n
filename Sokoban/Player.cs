@@ -38,30 +38,41 @@ namespace Sokoban
         
         public void _moveUp()
         {
-            field[CurXpos, CurYpos].HasPlayer = false;
-            CurXpos--;
-            field[CurXpos, CurYpos].HasPlayer = true;
+            if (!(field[CurXpos - 1, CurYpos].GetType() == typeof(Wall) || field[CurXpos, CurYpos].HasCrate)) {
+                field[CurXpos, CurYpos].HasPlayer = false;
+                CurXpos--;
+                field[CurXpos, CurYpos].HasPlayer = true;
+            }
         }
 
         public void _moveDown()
         {
-            field[CurXpos, CurYpos].HasPlayer = false;
-            CurXpos++;
-            field[CurXpos, CurYpos].HasPlayer = true;
+            if (!(field[CurXpos + 1, CurYpos].GetType() == typeof(Wall) || field[CurXpos + 1, CurYpos].HasCrate))
+            {
+                field[CurXpos, CurYpos].HasPlayer = false;
+                CurXpos++;
+                field[CurXpos, CurYpos].HasPlayer = true;
+            }
         }
 
         public void _moveRight()
         {
-            field[CurXpos, CurYpos].HasPlayer = false;
-            CurYpos++;
-            field[CurXpos, CurYpos].HasPlayer = true;
+            if (!(field[CurXpos, CurYpos + 1].GetType() == typeof(Wall) || field[CurXpos, CurYpos + 1].HasCrate))
+            {
+                field[CurXpos, CurYpos].HasPlayer = false;
+                CurYpos++;
+                field[CurXpos, CurYpos].HasPlayer = true;
+            }
         }
 
         public void _moveLeft()
         {
-            field[CurXpos, CurYpos].HasPlayer = false;
-            CurYpos--;
-            field[CurXpos, CurYpos].HasPlayer = true;
+            if (!(field[CurXpos, CurYpos - 1].GetType() == typeof(Wall) || field[CurXpos, CurYpos - 1].HasCrate))
+            {
+                field[CurXpos, CurYpos].HasPlayer = false;
+                CurYpos--;
+                field[CurXpos, CurYpos].HasPlayer = true;
+            }
         }
 
         public void _checkMove()
