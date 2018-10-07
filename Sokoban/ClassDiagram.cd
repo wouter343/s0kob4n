@@ -12,7 +12,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Player">
-    <Position X="7" Y="2.5" Width="1.5" />
+    <Position X="6.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CACAAAAAAAAgAAAAAAAACAAAAAEBAAABCBCAAAEgAAA=</HashCode>
       <FileName>Player.cs</FileName>
@@ -22,28 +22,28 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Tile">
-    <Position X="15.25" Y="1.25" Width="1.5" />
+    <Position X="13.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQBAAAAAAAAAAAAgAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Wall">
-    <Position X="15.25" Y="4.25" Width="1.5" />
+    <Position X="13.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Destination">
-    <Position X="13" Y="4.25" Width="1.5" />
+    <Position X="11.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Level">
-    <Position X="10" Y="1" Width="1.5" />
+    <Position X="8.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACBgIAAAAAIAAIAAAAAAAAAAAAAAAgAAAAAAAAAAQA=</HashCode>
       <FileName>Level.cs</FileName>
@@ -55,15 +55,12 @@
   <Class Name="Sokoban.GameView">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>GameView.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GameController" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Trap">
-    <Position X="17.5" Y="4.25" Width="1.5" />
+    <Position X="15.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Trap.cs</FileName>
