@@ -10,7 +10,7 @@ namespace Sokoban
     {
         public Tile[,] field {get; set;}
         private String[,] testveld = new String[2,8];
-        private String[,] stringField;
+       
 
         public Level()
         {
@@ -37,7 +37,6 @@ namespace Sokoban
         {
             field = new Tile[stringfield.GetLength(0),stringfield.GetLength(1)];
             for(int x =0; x < stringfield.GetLength(0); x++){
-            
                 for(int y = 0; y < stringfield.GetLength(1); y++) {
                     if(stringfield[x,y].Equals("#")){
                          field[x,y] = new Wall();
@@ -59,7 +58,7 @@ namespace Sokoban
         {
             string[] lines;
             var list = new List<string>();
-            var fileStream = new FileStream(@"C:\Users\rbnde\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
+            var fileStream = new FileStream(@"C:\Users\Wouter\Source\Repos\s0kob4n\Sokoban\Saves\Level1.txt", FileMode.Open, FileAccess.Read);
 
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
             {
@@ -77,7 +76,7 @@ namespace Sokoban
                     width = line.Length;       
                 }
             }
-            stringField = new String[height,width];
+           String[,] stringField = new String[height,width];
             int x = 0;
            
             foreach(string line in lines){
@@ -93,7 +92,39 @@ namespace Sokoban
 
         public void Save()
         {
-            throw new System.NotImplementedException();
+           String[] stringField = new string[field.GetLength(0)];
+           String value;
+
+           for (int x = 0; x < field.GetLength(0) ; x++){
+               
+                for(int y = 0; y < field.GetLength(1); y++){
+                   if (field[x,y].HasCrate)
+                    {
+                        value = "o";
+                    }
+                    else if (field[x,y].HasPlayer)
+                    {
+                        value = "@";
+                    }
+                    else if (field[x,y].GetType() == typeof(Wall))
+                    {
+                        value = "#";
+                    }
+                    else if (field[x,y].GetType() == typeof(Trap))
+                    {
+                        value = "~";
+                    }
+                    else if (field[x,y].GetType() == typeof(Destination))
+                    {
+                        value = "x";
+                    } else
+                    {
+                        value = ".";
+                    }
+                   stringField[x] += value;
+                }
+                System.IO.File.WriteAllLines(@"C:\Users\Wouter\Source\Repos\s0kob4n\Sokoban\Saves\test.txt", stringField);       
+            }
         }
 
         public void CheckFieldState()
